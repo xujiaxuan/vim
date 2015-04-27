@@ -1,0 +1,30 @@
+#!/bin/sh
+ssh-keygen -f "/home/xujiaxuan/.ssh/known_hosts" -R 192.168.1.1
+function s(){
+PARA=$1
+[ "$PARA" == "" ] && {
+	echo "the first parameter must be: qcawifish wifi wireless wlanlua slpwlanlua"
+	return
+}
+if  [ ${PARA} == "qcawifish" ]; then
+	echo 	scp /home/xujiaxuan/smartRouter/qsdk/qca/feeds/wlan_10_2/qca-wifi/files/lib/wifi/qcawifi.sh root@192.168.1.1:/lib/wifi
+	scp /home/xujiaxuan/smartRouter/qsdk/qca/feeds/wlan_10_2/qca-wifi/files/lib/wifi/qcawifi.sh root@192.168.1.1:/lib/wifi
+elif  [ ${PARA} == "wifi" ]; then
+	echo scp /home/xujiaxuan/smartRouter/qsdk/package/base-files/files/sbin/wifi root@192.168.1.1:/sbin/wifi
+	scp /home/xujiaxuan/smartRouter/qsdk/package/base-files/files/sbin/wifi root@192.168.1.1:/sbin/wifi
+elif  [ ${PARA} == "wireless" ]; then
+	echo scp /home/xujiaxuan/smartRouter/qsdk/package/base-files/files/etc/init.d/wireless root@192.168.1.1:/etc/init.d/wireless
+	scp /home/xujiaxuan/smartRouter/qsdk/package/base-files/files/etc/init.d/wireless root@192.168.1.1:/etc/init.d/wireless
+elif  [ ${PARA} == "wlanlua" ]; then
+	echo bash -c "scp /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/tlds-wireless/luasrc/tlds/lib/wireless.lua root@192.168.1.1:/usr/lib/lua/luci/tlds/lib"
+	bash -c "scp /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/tlds-wireless/luasrc/tlds/lib/wireless.lua root@192.168.1.1:/usr/lib/lua/luci/tlds/lib"
+	echo bash -c "scp /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/tlds-wireless/luasrc/tlds/wireless.lua root@192.168.1.1:/usr/lib/lua/luci/tlds"
+	bash -c "scp /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/tlds-wireless/luasrc/tlds/wireless.lua root@192.168.1.1:/usr/lib/lua/luci/tlds"
+elif  [ ${PARA} == "slpwlanlua" ]; then
+	echo bash -c "scp /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/slp-adapter/luasrc/tlds/adapter/wireless.lua root@192.168.1.1:/usr/lib/lua/luci/tlds/adapter"
+	bash -c "scp /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/slp-adapter/luasrc/tlds/adapter/wireless.lua root@192.168.1.1:/usr/lib/lua/luci/tlds/adapter"
+else
+	echo "the first parameter muse be:qcawifish wifi wireless wlanlua slpwlanlua"
+fi
+}
+s $1
