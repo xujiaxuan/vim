@@ -478,3 +478,4 @@ function! Do_CsTag()
 endfunction
 vmap <leader>jp :!jp<CR>
 " ：%s/vivian/sky/g repace
+set pastetoggle=<F12>
