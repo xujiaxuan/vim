@@ -573,6 +573,21 @@ alias pb52="cd /home/tplink/ht5200/HT46R064B"
 #	ctrl+b left right 切换。
 #	ctrl+b ctrl不放，可以left right一直按。
 
+#常用：
+#一行多个不同界面
+#创建：ctrl+b+c
+#切换：ctrl+b+p or n
+
+#多个同界面
+#	输入命令tmux split-window -d 水平新建
+#	ctrl+b 放开+% 竖直新建
+#	ctrl+b left right 切换。
+#   ctrl+b + o
+#
+# 显示问题：
+# 需要在tmux.conf中添加set -g default-terminal "screen-256color"
+#启动tmux的时候用tmux -2就可以了
+
 
 #vim中去掉
  #vim中执行：%s/^M$//g   
@@ -1055,3 +1070,7 @@ alias catdevices="sudo cat /sys/kernel/debug/usb/devices"
 		# END 文件结束时处理
 
 alias openwrt="ssh -l root 192.168.1.1"
+
+#tcsh
+
+#所有的复制黏贴都是用;+space y   ;+space p
