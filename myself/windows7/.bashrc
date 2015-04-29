@@ -587,6 +587,16 @@ alias pb52="cd /home/tplink/ht5200/HT46R064B"
 # 显示问题：
 # 需要在tmux.conf中添加set -g default-terminal "screen-256color"
 #启动tmux的时候用tmux -2就可以了
+# 滚屏幕
+# ctrl + b  up/down
+
+#复制模式步骤：
+#我的控制键为：C-b
+#1、 C-b [ 进入复制模式
+#2、 参考上表移动鼠标到要复制的区域，移动鼠标时可用vim的搜索功能"/","?"
+#3、 安空格键开始选择复制区域
+#4、    选择完成后安enter键退出
+#5、 C-b ] 粘贴
 
 
 #vim中去掉
@@ -1070,7 +1080,12 @@ alias catdevices="sudo cat /sys/kernel/debug/usb/devices"
 		# END 文件结束时处理
 
 alias openwrt="ssh -l root 192.168.1.1"
+alias ubuntu="ssh -l xujiaxuan 192.168.1.199"
 
 #tcsh
 
 #所有的复制黏贴都是用;+space y   ;+space p
+
+#NERD在windows显示问题：
+#~/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+# !nerdtree#runningwindows 的！符号去掉。
