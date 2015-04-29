@@ -312,10 +312,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <C-h> <C-w>h
-map <leader>gj <C-w>+
-map <leader>gk <C-w>-
-map <leader>gl <C-w><
-map <leader>gh <C-w>>
+map <leader>j 20<C-w>+
+map <leader>k 20<C-w>-
+map <leader>l 20<C-w><
+map <leader>h 20<C-w>>
 
 
 " replaced by <C-c>
