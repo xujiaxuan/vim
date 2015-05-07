@@ -104,18 +104,22 @@ let g:EasyMotion_leader_key = '<Leader>'
 "I just enable w and j action
 let g:EasyMotion_mapping_f = ''
 let g:EasyMotion_mapping_F = ''
-let g:EasyMotion_mapping_t = ''
+let g:EasyMoton_mapping_t = ''
 let g:EasyMotion_mapping_T = ''
 let g:EasyMotion_mapping_W = ''
-let g:EasyMotion_mapping_B = ''
+"let g:EasyMotion_mapping_B = ''
 let g:EasyMotion_mapping_e = ''
 let g:EasyMotion_mapping_E = ''
 let g:EasyMotion_mapping_ge = ''
 let g:EasyMotion_mapping_gE = ''
-let g:EasyMotion_mapping_j = ''
+"let g:EasyMotion_mapping_j = ''
 let g:EasyMotion_mapping_k = ''
 let g:EasyMotion_mapping_n = ''
 let g:EasyMotion_mapping_N = ''
+" s for first character
+" b for before
+" w for after
+
 "Bundle 'goldfeld/vim-seek'
 "Bundle 'joeytwiddle/sexy_scroller.vim'
 Bundle 'tpope/vim-markdown'
