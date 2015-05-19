@@ -1,0 +1,9 @@
+#!/bin/bash
+
+P=`readlink -f $(dirname $0)`
+
+cd $P
+
+mkdir -p ~/bin
+rm -f ~/bin/json2html
+ln -s $P/json2html ~/bin/json2html
