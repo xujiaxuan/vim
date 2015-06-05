@@ -16,3 +16,12 @@ notice: version 要匹配
 
 gvim的配置文件再安装目录中的：_vimrc
 	example:C:\Program Files (x86)\Vim\_vimrc
+
+add one version in ubuntu:
+	eclipse:3.7.2 v2
+	eclim_1.7.19
+
+
+bundle:
+	windows:adt-bundle-windows-x86_64-20140321\adt-bundle-windows-x86_64-20140321
+	ubuntu:adt-bundle-linux-x86_64-20130219
