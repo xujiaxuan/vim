@@ -25,3 +25,9 @@ add one version in ubuntu:
 bundle:
 	windows:adt-bundle-windows-x86_64-20140321\adt-bundle-windows-x86_64-20140321
 	ubuntu:adt-bundle-linux-x86_64-20130219
+
+ubuntu12.04:
+	incremental find ctrl+j editingtext edit
+	open search dialog ctrl+h inwindows search
+	build all ctrl+b inwindows project
+	paste shift+insert  indialogs and windows edit
