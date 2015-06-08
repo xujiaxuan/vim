@@ -31,3 +31,17 @@ ubuntu12.04:
 	open search dialog ctrl+h inwindows search
 	build all ctrl+b inwindows project
 	paste shift+insert  indialogs and windows edit
+
+copy to command mode line:
+	edit->copy
+	edit->paste
+	attention: just use mourse without the alt+e+c alt+e+p  becaute alt+e+c is eclipse and not gvim
+		if you want to use insert in gvim  you can use alt+s left left c   alt+s left left p
+	you can use :"+y to 剪切板
+
+	one time after unbind:paste shift+insert  indialogs and windows edit  and restart eclipse
+	shift+insert does good
+	
+copy in command line in gvim and vim :
+	ctrl+r + register
+	it will do as the key in common mode: "+register
