@@ -7,3 +7,12 @@ windows -> preference -> general
 	keys
 	find ctrl+F	inwindows edit
 	build all ctrl+b inwindows project
+	show outline ctlr+o c/c++ editor c/c++ source
+	quick outline ctrl+o editing in structured text editors navigate
+	quick outline ctrl+o editing java source navigate
+	indent line ctrl+i c/c++ editor c/c++ source
+	format active elements ctrl+i editing in structured text editors edit
+	correct indentation ctrl+i editing java cource  source
+
+标记例子:
+	ma `a
