@@ -135,7 +135,7 @@ Bundle 'altercation/vim-colors-solarized.git'
 set t_Co=256
 "colorscheme solarized
 colorscheme darkburn_ie7
-syntax on
+"syntax on
 
 " Lua
 Bundle 'xolox/vim-misc'
@@ -292,7 +292,7 @@ map <leader>rl :cs add cscope.out<CR>
 vmap <leader>gv :call VisualSelection('gv')<CR>
 
 " Open vimgrep and put the cursor in the right position
-nmap <leader>gv :vimgrep // **/*.<left><left><left><left><left><left><left>
+nmap <leader>gv :vimgrep // **/*<left><left><left><left><left><left>
 
 " When you press <leader>r you can search and replace the selected text
 " append /g to the end to replace all
@@ -318,8 +318,8 @@ map <C-l> <C-w>l
 map <C-h> <C-w>h
 map <leader>j 20<C-w>+
 map <leader>k 20<C-w>-
-map <leader>l 20<C-w><
-map <leader>h 20<C-w>>
+map <leader>h 20<C-w><
+map <leader>l 20<C-w>>
 
 
 " replaced by <C-c>
@@ -482,4 +482,19 @@ function! Do_CsTag()
 endfunction
 vmap <leader>jp :!jp<CR>
 " ：%s/vivian/sky/g repace
-set pastetoggle=<F12>
+set pastetoggle=<F2>
+map L $
+map H ^
+
+" for eclim
+set nocompatible
+filetype plugin indent on
+
+" for java editor
+set ts=4
+set expandtab
+"%retab! http://blog.163.com/panda_sha/blog/static/478281962011616124316/
+set autoindent
+
+" for svn
+Bundle "xujiaxuan/vcscommand.vim"
