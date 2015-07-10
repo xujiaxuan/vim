@@ -1,0 +1,24 @@
+# I like vi mode，设置默认的编辑模式为vi
+set editing-mode vi
+ 
+# emacs mode settings，emacs模式配置指令
+$if mode=emacs
+ 
+# ...
+ 
+# vi mode settings，vi模式配置指令
+$else
+ 
+# Ctrl+l : clear screen ，清屏
+"\C-l": clear-screen 
+ 
+# Ctrl+p : previous-history，前一条历史命令
+"\C-p": previous-history
+ 
+# Ctrl+n : next-history，后一条历史命令
+"\C-n": next-history
+ 
+# Ctrl+e : press esc，ESC键，你懂的
+"\C-e": "\e"
+ 
+$endif
