@@ -1,6 +1,8 @@
 #!/bin/bash
 # by pax (pangxing@tp-link.net)
 
+# readme: need source this file in ~/.bashrc . /home/xujiaxuan/mybin/xgrep
+
 function xfind()
 {
     find . -name .repo -prune -o -name .git -prune -o -name "*$@*" -print
