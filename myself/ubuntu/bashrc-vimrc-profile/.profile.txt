@@ -21,6 +21,10 @@ if [ -d "$HOME/mybin" ] ; then
     PATH="$HOME/mybin:$PATH"
 fi
 
+if [ -d "/home/xujiaxuan/smartRouter/amba/ambarella/gcc-arm-none-eabi-4_7-2013q3" ] ; then
+    PATH="/home/xujiaxuan/smartRouter/amba/ambarella/gcc-arm-none-eabi-4_7-2013q3/bin:$PATH"
+fi
+
 if [ -d "/home/xujiaxuan/smartRouter/qsdk/staging_dir/toolchain-mips_r2_gcc-4.6-linaro_uClibc-0.9.33.2/libexec/gcc/mips-openwrt-linux-uclibc/4.6.3" ] ; then
     PATH="/home/xujiaxuan/smartRouter/qsdk/staging_dir/toolchain-mips_r2_gcc-4.6-linaro_uClibc-0.9.33.2/libexec/gcc/mips-openwrt-linux-uclibc/4.6.3:$PATH"
 fi

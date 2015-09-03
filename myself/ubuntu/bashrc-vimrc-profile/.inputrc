@@ -20,5 +20,4 @@ $else
  
 # Ctrl+e : press esc，ESC键，你懂的
 "\C-e": "\e"
- 
 $endif

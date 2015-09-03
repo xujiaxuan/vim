@@ -1,11 +1,19 @@
 #!/bin/bash
 # by pax (pangxing@tp-link.net)
 
-# readme: need source this file in ~/.bashrc . /home/xujiaxuan/mybin/xgrep
-
 function xfind()
 {
     find . -name .repo -prune -o -name .git -prune -o -name "*$@*" -print
+}
+
+function vxfind()
+{
+    vim `find . -name .repo -prune -o -name .git -prune -o -name "*$@*" -print`
+}
+
+function xv()
+{
+    vim `find . -name .repo -prune -o -name .git -prune -o -name "*$@*" -print`
 }
 
 function xfindi()
@@ -76,7 +84,7 @@ function pgrepi()
     find . -name '*.pdf' -print -exec pdftotext {} /tmp/tmp.txt \; -exec grep -i --color "$@" /tmp/tmp.txt \;
 }
 
-function xxgrep()
+function xgrep()
 {
     find . -name .repo -prune -o -name .git -prune -o  -type f -name "*" -print0 | xargs -0 grep --color -n "$@"
 }
@@ -86,4 +94,9 @@ function xgrepi()
     find . -name .repo -prune -o -name .git -prune -o  -type f -name "*" -print0 | xargs -0 grep -i --color -n "$@"
 }
 
-
+function find-grep()
+{
+    find . -type f -name "$1" |xargs echo "PATH:"
+    find . -type f -name "$1" |xargs grep --color -i -n "$2"
+    #find . -name .repo -prune -o -name .git -prune -o  -type f -print0 -name "$1"|xargs -0 grep --color -i -Rs "$2" -n
+}

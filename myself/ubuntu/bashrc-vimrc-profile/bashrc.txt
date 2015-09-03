@@ -75,6 +75,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+alias grep='grep --color'
 alias ls='ls --color=auto'
 
 # some more ls aliases
@@ -97,6 +99,7 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+. /home/xujiaxuan/mybin/xgrep
 
 alias server="cd ~/work/groupwork/teamwork/team3/server" 
 alias client="cd ~/work/groupwork/teamwork/team3/client"
@@ -108,6 +111,7 @@ alias gitre="git reflog" #头指针变动
 alias gitlogog="git log --oneline --graph"  #一行
 alias gitlog="git log"	#所有
 alias gitlogformat="git log --pretty=format:\"%h-%an		:%s\"" #格式
+alias gitlogp="git log -p"
 #stash clean
 alias gitstash="git stash" #中断当前编辑并保存，同时将工作去恢复到上次提交
 alias gitstashap="git stash apply" #恢复上次stash的内容
@@ -180,12 +184,12 @@ alias s="bashrcInclude"
 alias upbashrc="source ~/.bashrc"
 
 #find Path
-alias findr="find |grep "	#递归查找文件并显示。然后查找符合pattern 的文件 :find | grep <pattern>
-alias findt="find ./ |xargs grep --color -i " #递归查找文件内容包括pattern的文件及位置 ：find ./ | xargs grep --color <pattern>
+alias findr="find ./|grep --color -i -n "	#递归查找文件并显示。然后查找符合pattern 的文件 :find | grep <pattern>
+alias findt="find ./ |xargs grep --color -i -n " #递归查找文件内容包括pattern的文件及位置 ：find ./ | xargs grep --color <pattern>
 #find file name
 alias findrr="find ./ -name"
 alias f="find ./ -name"
-alias findtt="findttt.sh * " #findttt.sh filename  express
+alias findtt="findttt.sh" #findttt.sh filename  express
 alias findfileregress="findttt.sh "
 
 #cd
@@ -336,11 +340,15 @@ alias openwrt2="ssh -l root 192.168.2.1"
 alias openwrt3="ssh -l root 192.168.1.3"
 alias keygen="ssh-keygen -f \"/home/xujiaxuan/.ssh/known_hosts\" -R 192.168.1.1"
 alias keygen="ssh-keygen -f \"/home/xujiaxuan/.ssh/known_hosts\" -R 192.168.1.1"
-alias vcd="v ."
+alias vcd="vim ."
 alias qca-hostap="cd /home/xujiaxuan/smartRouter/qsdk/qca/src/qca-hostap"
 alias envs="source /home/xujiaxuan/lte/lte/apps_proc/oe-core/build/conf/envsetup.sh"
 alias lsdk="cd /home/xujiaxuan/ap151/qca.lsdk.drivers.wlan_modules/wlan_modules"
-alias slp="cd /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/slp-adapter"
+alias slp--="cd /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/slp-adapter"
+alias slp="cd /home/xujiaxuan/slp/torchlight"
+alias slpbin="cd /home/xujiaxuan/slp/torchlight/bin/ar71xx"
+alias slpluci="cd /home/xujiaxuan/slp/torchlight/tp_package/luci/luci_tile2-0.11.1"
+alias slprootdir="cd /home/xujiaxuan/slp/torchlight/build_dir/target-mips_r2_uClibc-0.9.33.2/root-ar71xx"
 alias hostapddir="cd /home/xujiaxuan/smartRouter/qsdk/qca/src/qca-hostap"
 alias hostapdfeed="cd /home/xujiaxuan/smartRouter/qsdk/qca/feeds/wlan_10_2/qca-hostap"
 alias guest-network="cd /home/xujiaxuan/smartRouter/qsdk/tp-link/package/tl-guest-network"
@@ -352,3 +360,123 @@ alias rk="cd /home/xujiaxuan/rkflash/Linux_burn_AP_tools"
 alias app="cd /home/xujiaxuan/lte/android/packages/apps/TPWlanIsolate"
 alias tlds-isolate="cd /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/tlds-wlan-isolate"
 alias tlds-guest="cd /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/tlds-guest_network"
+alias tp-link="cd /home/xujiaxuan/smartRouter/qsdk/tp-link/package"
+alias iwinfodif="cd /home/xujiaxuan/smartRouter/qsdk/package/iwinfo"
+alias art="cd /home/xujiaxuan/smartRouter/qsdk/qca/src/LinuxART2"
+alias tmux="tmux -2"
+alias vimgit="cd /mnt/hgfs/E/Cygwin-1-7-20/home/tplink/vim/vimgit/myself/ubuntu/bashrc-vimrc-profile"
+alias quagga="cd /home/xujiaxuan/smartRouter/qsdk/qca/feeds/packages/net/quagga"
+alias tlds-switch="cd /home/xujiaxuan/smartRouter/qsdk/qca/feeds/luci/luci/src_sr/libs/tlds-wlan-switch"
+alias wlan-switch="cd /home/xujiaxuan/smartRouter/qsdk/tp-link/package/tl-wlan-switch"
+alias app-switch="cd /home/xujiaxuan/lte/android/packages/apps/TPWlanSwitch"
+alias one-key-for-switch="mmm -B /home/xujiaxuan/lte/android/packages/apps/TPWlanSwitch && app-switch-install"
+alias app-clock-install="sudo /home/xujiaxuan/mybin/adb install -r /home/xujiaxuan/lte/android/out/target/product/rk30sdk/system/app/TPClock.apk"
+alias app-switch-install="sudo /home/xujiaxuan/mybin/adb install -r /home/xujiaxuan/lte/android/out/target/product/rk30sdk/system/app/TPWlanSwitch.apk"
+alias one-key-for-switch2="mmm -B /home/xujiaxuan/lte/android/packages/apps/TPWlanSwitchTask2/ && app-clock-install"
+
+# laptop
+alias q3des="cd /mnt/X/home/chenxuan/桌面"
+alias q3wireless="cd /mnt/X/home/chenxuan/wireless"
+alias q3jx="cd /mnt/X/home/chenxuan/xjx"
+alias q3rootfs="cd /mnt/X/home/chenxuan/wireless/qca9377/fixce/AIO/rootfs"
+alias q3cfgdir="cd /mnt/X/home/chenxuan/wireless/amba/ambarella/ambalink_sdk_3_10/output.oem.dragonfly/a12_ambalink/build/qca9377-amba/drivers/qcacld-new/firmware_bin"
+alias q3driver="cd /mnt/X/home/chenxuan/wireless/amba/ambarella/ambalink_sdk_3_10/output.oem.dragonfly/a12_ambalink/build/qca9377-amba"
+alias q3make="cd /mnt/X/home/chenxuan/wireless/amba/ambarella/ambalink_sdk_3_10/output.oem.dragonfly/a12_ambalink"
+alias amba="cd /home/xujiaxuan/smartRouter/amba/ambarella"
+alias ambai="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10"
+alias pkg="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/pkg"
+alias ambaoutput="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/output.oem/a12_ambalink"
+alias ambafw="cd /home/xujiaxuan/smartRouter/amba/ambarella/rtos/out/fwprog"
+alias ambaconfig="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/ambarella/configs"
+alias ambamakeqca="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/output.oem/a12_ambalink"
+alias ambaturnkey="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/pkg/network_turnkey"
+alias ambadirtarget="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/output.oem/a12_ambalink/target"
+alias ambadirbuild="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/output.oem/a12_ambalink/build"
+alias ambadirqca9377="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/output.oem/a12_ambalink/build/qca9377-amba"
+alias ambadirqca9377src="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/external_sdk/atheros/qca9377"
+alias ambadirqca9377package="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/ambarella/package/external_sdk/qca9377"
+alias ambadirqca9377pkg="cd /home/xujiaxuan/smartRouter/amba/ambarella/ambalink_sdk_3_10/pkg/external_sdk/qca9377"
+alias wearable="cd /home/xujiaxuan/lte/wearable/wearable"
+alias ambasvn="cd /home/xujiaxuan/lte/wearable/wearable/a12/software/ambarella"
+
+alias windows7="cd /mnt/hgfs/G/xujiaxuan"
+
+#slpdir
+alias slpdir="cd /home/xujiaxuan/lte/slpsvn"
+alias slpsvn="cd /home/xujiaxuan/lte/slpsvn"
+alias slptop="cd /home/xujiaxuan/lte/slpsvn"
+alias slpbuild="cd /home/xujiaxuan/lte/slpsvn/torchlight"
+alias slpqcasrc="cd /home/xujiaxuan/lte/slpsvn/slp-sp-target-src/wifi-driver/qca-wifi-10.2.3.31"
+alias slpqcafeed="cd /home/xujiaxuan/lte/slpsvn/torchlight/tp_package/wlan-driver/qca"
+alias slpsdk="cd /home/xujiaxuan/lte/slpsdk/SLP_SDK_for_wdr5510v2_150730"
+alias slpbuildimage="cd /home/xujiaxuan/lte/slpsdk/SLP_Image_Builder_for_wdr5510v2_150730"
+
+alias git-svn="cd /home/xujiaxuan/lte/git-svn"
+alias wds-htm="cd /home/xujiaxuan/lte/git-svn/team6/torchlight/tp_package/luci/luci_tile2-0.11.1/html/tile_2.0/OEM/h39rv1/wds/admin"
+alias wds-luci="cd /home/xujiaxuan/lte/git-svn/team6/torchlight/tp_package/luci"
+alias wds-wlan-driver-feed="cd /home/xujiaxuan/lte/git-svn/team6/torchlight/tp_package/wlan-driver/qca/ap151"
+alias wds-wlan-driver="cd /home/xujiaxuan/lte/git-svn/team6/slp-sp-target-src/wifi-driver/qca-wifi-10.2.3.31"
+
+
+#commands for svn
+    #svn checkout(或svn co) URL [PATH]
+        #example: svn co http://192.168.1.101/svn/repos1/WR841N/rc_files/src_en/frames /svn/abc
+        #example: svn co --username xujiaxuan@tp-link.net --password xjx2488901 
+            #http://mobilesvn.rd.tp-link.net/svn/management/document/SmartRouter/研究文档
+    #svn update(或svn up) [PATH]
+    #svn update(或svn up) [PATH] -r arg
+        # -r arg 
+            #NUMBER      直接指定版本的序号的数值例如上图中被选中的版本号941
+            #DATE        DATE的格式是{YYYYMMDD}，它指定此日期前的最后一个版本
+            #“BASE”      直接使用字符串“BASE”，指定本地库所处的版本
+    #svn commit(或svn ci) [PATH] [-m arg]
+        #-m arg用户添加提交时的日志，arg代表要添加日志的内容
+    #svn cleanup
+        #Update、Checkout中断
+    #svn log
+    #svn export URL/PATH [PATH2]
+    #svn import [PATH] URL
+    #svn add PATH
+        #PATH是要增加的目录或文件
+    #svn delete(或svn remove/del/rm) URL/PATH
+        #URL/PATH是要删除的文件或目录的在SVN服务器上的路径或本地路径 
+    #svn rename
+        #svn move(或svn rename/mv/ren) SRC_URL DST_URL
+            #SRC_URL和DST_URL可以是本地路径也可以是SVN服务器路径，它们如果在同一个文件夹中就是改名操作。
+    #Repo-browser
+        #svn list(svn ls) URL
+    #Show log 
+        #svn log [PATH(本地SVN库路径)]
+        #-r arg(最高版本):arg(最低版本)
+            #examlpe:svn log -r '{2014-08-19 16:26:28}'
+    #svn diff
+        #svn diff >~/a && vim ~/a
+        # like git diff HEAD
+        # svn diff   -c  r4343
+
+    #svn ci [PATH]
+        # like git status
+    #svn lock/unlock
+        # 通知其他用户，某些文件正在被使用
+        # Release lock，来解除正在使用的状态
+    #svn blame 
+        # 与git blame 差不多
+    #ignore file
+        # global-ignores
+            # ~/.subversion/config
+
+# git-svn command ref:http://blog.chinaunix.net/uid-11639156-id-3077471.html http://git-scm.com/docs/git-svn
+    # git svn clone http://rdscm.tp-link.net/svn/SOHO/SLP/branches/team6
+    # git commit -m "abcd"
+        #git svn dcommit
+    
+#smart router
+    #rp
+    #git push origin HEAD:refs/for/qsdk/master
+    #git checkout -b develop origin/qsdk/master
+    #AP
+    #git checkout -b develop origin/rk30_sr
+    #git push origin HEAD:refs/for/rk30_sr
+
+#remoutn 
+    # mount -o remount,rw /

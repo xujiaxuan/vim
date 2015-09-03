@@ -181,14 +181,14 @@ endif
 "	map <F6> :cs find d<space>
 "xujiaxuan start
               set cscopeverbose
-              nmap <C-a>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-              nmap <C-a>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-              nmap <C-a>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-              nmap <C-a>t :cs find t <C-R>=expand("<cword>")<CR><CR>                                                                                                             
-              nmap <C-a>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-              nmap <C-a>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-              nmap <C-a>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-              nmap <C-a>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+              nmap <C-l>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+              nmap <C-l>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+              nmap <C-l>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+              nmap <C-l>t :cs find t <C-R>=expand("<cword>")<CR><CR>                                                                                                             
+              nmap <C-l>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+              nmap <C-l>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+              nmap <C-l>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+              nmap <C-l>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 "xujiaxuan end
 "###########################
 "# General
