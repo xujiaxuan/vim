@@ -1089,3 +1089,13 @@ alias ubuntu="ssh -l xujiaxuan 192.168.1.199"
 #NERD在windows显示问题：
 #~/.vim/bundle/nerdtree/plugin/NERD_tree.vim
 # !nerdtree#runningwindows 的！符号去掉。
+alias github="cd /home/tplink/vim/vimgit"
+
+
+#smart router
+	#rp 
+	#git push origin HEAD:refs/for/qsdk/master
+	#git checkout -b develop origin/qsdk/master
+	#AP
+	#git checkout -b develop origin/rk30_sr
+	#git push origin HEAD:refs/for/rk30_sr
