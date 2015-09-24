@@ -417,6 +417,28 @@ alias wds-luci="cd /home/xujiaxuan/lte/git-svn/team6/torchlight/tp_package/luci"
 alias wds-wlan-driver-feed="cd /home/xujiaxuan/lte/git-svn/team6/torchlight/tp_package/wlan-driver/qca/ap151"
 alias wds-wlan-driver="cd /home/xujiaxuan/lte/git-svn/team6/slp-sp-target-src/wifi-driver/qca-wifi-10.2.3.31"
 
+alias scpumac="scp ./build_dir/linux-ar71xx_generic/qca-wifi-10.2.3.31/umac/umac.ko root@192.168.1.1:/lib/modules/3.3.8"
+
+#signal
+alias killz="kill -STOP "   #ctrl +z
+alias killc="kill -INT "    #ctrl+c
+alias killq="kill -QUIT"    #ctrl + \
+    #list jobs in this terminal
+        #jobs
+    #runing
+        #fg <NUM>
+#ps
+alias psshow="ps -aux"
+alias psgrep="ps -aux |grep --color"
+
+#zsh
+    #tab n/p/f/b
+alias zshrc="vim ~/.zshrc"
+alias upzshrc="source ~/.zshrc"
+
+#autojump
+[[ -s /home/xujiaxuan/.autojump/etc/profile.d/autojump.sh ]] && source /home/xujiaxuan/.autojump/etc/profile.d/autojump.sh
+
 
 #commands for svn
     #svn checkout(或svn co) URL [PATH]
@@ -480,3 +502,8 @@ alias wds-wlan-driver="cd /home/xujiaxuan/lte/git-svn/team6/slp-sp-target-src/wi
 
 #remoutn 
     # mount -o remount,rw /
+
+#tmp
+    # make V=s package/qca/clean PR_NAME=wdr5510v2
+    # make PR_NAME=wdr5510v2 package/qca/compile V=s
+    # make V=s image PROFILE=wdr5510v2

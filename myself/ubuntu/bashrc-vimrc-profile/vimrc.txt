@@ -414,6 +414,8 @@ nnoremap <slient> <F8> :TlistToggle<CR>
 
 nmap wm :WMToggle<cr>
 nmap vq :q!<cr>
+nmap vw :w!<cr>
+nmap vx :w!<cr>
 nmap VQ :q!<cr>
 nmap vwq :wq<cr>
 nmap cw :cw<cr>
