@@ -2,7 +2,7 @@
 #
 # powerful pandoc markdown converter
 #
-# Author: OuyangXY <hh123okbb@gmail.com>
+# Author: xujx <xujiaxuan6@qq.com>
 
 usage() {
 	cat <<EOF
@@ -23,9 +23,9 @@ EOF
 # CORE_CSS=~/.pandoc/pandoc_css/ie7unnel.css
 # SIDEBAR_CSS=~/.pandoc/pandoc_css/sidebar.css
 
-# custom for TP-LINK release
-CORE_CSS=~/.pandoc/pandoc_css/tplink.css
-SIDEBAR_CSS=~/.pandoc/pandoc_css/tplink_sidebar.css
+# custom for wangsu release
+CORE_CSS=~/.pandoc/pandoc_css/wangsu.css
+SIDEBAR_CSS=~/.pandoc/pandoc_css/wangsu_sidebar.css
 
 T=t.html
 TOC=--toc

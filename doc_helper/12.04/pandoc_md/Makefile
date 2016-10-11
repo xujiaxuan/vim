@@ -1,6 +1,6 @@
 # build html file from pandoc's extended markdown file
 #
-# Author: ie7unnel <oywymail@163.com>
+# Author: xujx <xujiaxuan6@qq.com>
 #
 
 # markdown source files

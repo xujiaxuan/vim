@@ -5,15 +5,15 @@ P=`readlink -f $(dirname $0)`
 cd $P
 
 ## install newest pandoc for 64bit ubuntu
-{
-sudo apt-get install libyaml-0-2 && \
-sudo apt-get install libicu52 && \
-sudo apt-get install pandoc && \
-sudo dpkg -i dep/dpkg/*
-} || {
-echo "** Install failed"
-exit 1
-}
+#{
+#sudo apt-get install libyaml-0-2 && \
+#sudo apt-get install libicu52 && \
+#sudo apt-get install pandoc && \
+#sudo dpkg -i dep/dpkg/*
+#} || {
+#echo "** Install failed"
+#exit 1
+#}
 
 mkdir -p ~/bin ~/.pandoc
 ln -fs $PWD/pandoc_md.sh ~/bin/pandoc_md.sh
