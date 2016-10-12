@@ -1,7 +1,26 @@
 #!/bin/bash
 # by pax (pangxing@tp-link.net)
 
+function x()
+{
+    echo "vim \`find ./ -name $1\`" > /home/$(whoami)/mybin/tmp/$1
+    chmod 777 /home/$(whoami)/mybin/tmp/$1
+    vim `find ./ -name $1`
+}
+
+function gx()
+{
+    echo "gvim \`find ./ -name $1\`" > /home/$(whoami)/mybin/tmp/$1
+    chmod 777 /home/$(whoami)/mybin/tmp/$1
+    gvim `find ./ -name $1`
+}
+
 function xfind()
+{
+    find . -name .repo -prune -o -name .git -prune -o -name "*$@*" -print
+}
+
+function xfindr()
 {
     find . -name .repo -prune -o -name .git -prune -o -name "*$@*" -print
 }
@@ -91,7 +110,7 @@ function xgrep()
 
 function xgrepi()
 {
-    find . -name .repo -prune -o -name .git -prune -o  -type f -name "*" -print0 | xargs -0 grep -i --color -n "$@"
+    find . -name .repo -prune -o -name .git -prune -o  -type f -name "*" -print0 | xargs -0 grep -i --color -n "$@"| sed 's/:/ +/' |grep -i --color -n "$@"
 }
 
 function find-grep()
@@ -100,3 +119,16 @@ function find-grep()
     find . -type f -name "$1" |xargs grep --color -i -n "$2"
     #find . -name .repo -prune -o -name .git -prune -o  -type f -print0 -name "$1"|xargs -0 grep --color -i -Rs "$2" -n
 }
+
+function gitdiffst()
+{
+    echo git diff $@ --name-status 
+    git diff $@ --name-status 
+}
+
+function autocd()
+{
+    install -d $1
+    cd $1
+}
+
