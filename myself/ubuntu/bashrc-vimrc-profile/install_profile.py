@@ -1,12 +1,11 @@
-
 #!/usr/bin/python
 import os
 import sys
-os.system("scp .profile 	~/.profile.txt")
-os.system("scp .vimrc 	~/.vimrc")
-os.system("scp .bashrc 	~/.bashrc")
-os.system("scp .dircolors ~/.dircolors")
-os.system("scp .inputrc 	~/.inputrc")
-os.system("scp .profile 	~/.profile")
-os.system("scp .tmux.conf ~/.tmux.conf")
-os.system("scp .zshrc 	~/.zshrc")
+os.system(" cp .profile 	~/.profile.txt")
+os.system(" cp .vimrc 	        ~/.vimrc")
+os.system(" cp .bashrc 	        ~/.bashrc")
+os.system(" cp .dircolors       ~/.dircolors")
+os.system(" cp .inputrc 	~/.inputrc")
+os.system(" cp .profile 	~/.profile")
+os.system(" cp .tmux.conf       ~/.tmux.conf")
+os.system(" cp .zshrc 	        ~/.zshrc")
