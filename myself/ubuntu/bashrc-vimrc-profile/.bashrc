@@ -692,5 +692,6 @@ alias ia="ifconfig -a"
 #alias ssh 125
 alias ssh125="sudo ssh -l xujiaxuan -N -f -R 2222:0.0.0.0:63501 10.8.74.125"
 
-
-
+#proxychains
+alias proxy_git="proxychains git "
+alias pgst="proxychains git status"

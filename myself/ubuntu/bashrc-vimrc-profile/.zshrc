@@ -676,6 +676,11 @@ alias start_dropbear="sudo /usr/local/sbin/dropbear -p 202 -E -F"
 alias dpi="cd /home/xujx/compile2/re_git/dpi_t1"
 alias dpi-dir="cd /home/xujx/compile2/re_git/ndpi_github/nDPI"
 alias flask="cd /home/xujx/compile2/re_git/dpi_t1/web/flask"
+alias work="cd /home/xujx/vim2/vim"
 
 #scp 37 to local
     #scp -P 202 a xujx@10.8.74.174:~/
+
+#proxychains
+alias proxy_git="proxychains git "
+alias pgst="proxychains git status"
