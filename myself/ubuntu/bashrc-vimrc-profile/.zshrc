@@ -677,6 +677,7 @@ alias dpi="cd /home/xujx/compile2/re_git/dpi_t1"
 alias dpi-dir="cd /home/xujx/compile2/re_git/ndpi_github/nDPI"
 alias flask="cd /home/xujx/compile2/re_git/dpi_t1/web/flask"
 alias work="cd /home/xujx/vim2/vim"
+alias work_ubuntu="cd /home/xujx/vim2/vim/myself/ubuntu"
 
 #scp 37 to local
     #scp -P 202 a xujx@10.8.74.174:~/
@@ -684,3 +685,4 @@ alias work="cd /home/xujx/vim2/vim"
 #proxychains
 alias proxy_git="proxychains git "
 alias pgst="proxychains git status"
+alias p="proxychains "

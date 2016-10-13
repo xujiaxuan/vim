@@ -164,19 +164,19 @@ Bundle 'altercation/vim-colors-solarized.git'
 "else
 "    set background=dark
 "endif
-set background=dark
+"set background=dark
 "set background=light
 "set nobackup
 set t_Co=256
 colorscheme solarized
-"colorscheme darkburn_ie7
+colorscheme darkburn
 syntax on
 syntax enable
 
 if has('gui_running')
     colorscheme solarized
 else
-    colorscheme darkburn_ie7
+    colorscheme darkburn
 endif
 
 " Lua
