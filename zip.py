@@ -2,7 +2,8 @@
 # coding: utf-8
 """
 压缩和解压zip文件
-yum install p7zip.x86_64
+centos:yum install p7zip.x86_64
+ubuntu:apt-get install p7zip p7zip-full
 """
 
 import os
