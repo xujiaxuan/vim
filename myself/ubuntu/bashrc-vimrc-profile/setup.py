@@ -26,11 +26,12 @@ os.system("tar -xjvf stardict-xhzd-2.4.2.tar.bz2")
 os.system("sudo mv -u stardict-langdao-ce-gb-2.4.2 stardict-langdao-ec-gb-2.4.2 \
 		stardict-xhzd-2.4.2 stardict-cedict-gb-2.4.2 stardict-oxford-gb-2.4.2 \
 		/usr/share/stardict/dic/")
+#ref:http://download.huzheng.org/zh_CN/ http://stardict-4.sourceforge.net/
+
 #os.system(". ~/.zshrc")
 #os.system(". ~/.bashrc")
 #os.system(". ~/.profile")
 #os.system(". ~/.tmux.conf")
-
 
 print "\n\nNEXT ------------------BundleInstall in vim----------------------------"
 

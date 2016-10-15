@@ -686,3 +686,5 @@ alias work_ubuntu="cd /home/xujx/vim2/vim/myself/ubuntu"
 alias proxy_git="proxychains git "
 alias pgst="proxychains git status"
 alias p="proxychains "
+
+DISABLE_AUTO_TITLE="true"
