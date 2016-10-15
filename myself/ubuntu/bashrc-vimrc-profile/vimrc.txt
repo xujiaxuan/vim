@@ -237,7 +237,7 @@ endif
 "###########################
 
 " Something useful for myself
-set cmdheight=2
+set cmdheight=1
 set scrolloff=3
 
 " Return to last edit position when opening files (You want this!)
