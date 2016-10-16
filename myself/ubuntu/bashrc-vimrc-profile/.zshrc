@@ -688,3 +688,4 @@ alias pgst="proxychains git status"
 alias p="proxychains "
 
 DISABLE_AUTO_TITLE="true"
+export PATH=/home/xujx/.cabal/bin:$PATH
