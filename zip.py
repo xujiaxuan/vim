@@ -54,4 +54,4 @@ if __name__ == '__main__':
 	elif sys.argv[1] == "print" or sys.argv[1] == "p":
 		printdir(zip_file)
 	elif sys.argv[1] == "extrack" or sys.argv[1] == "e":
-		extract(zip_file, 'zip_dir.bak')
+		extract(zip_file, './')
