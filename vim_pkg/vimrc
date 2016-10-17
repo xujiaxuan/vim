@@ -117,6 +117,13 @@ nmap <leader>gl :Glog<CR>
 nmap <leader>gm :Gblame<CR>o
 nmap <leader>gn :Gblame<CR>oo
 
+nmap <leader><F9> :let NERDTreeWinPos='left'<CR>
+nmap <leader><F10> :let NERDTreeWinPos='right'<CR>
+vmap <leader><F9> :let NERDTreeWinPos='left'<CR>
+vmap <leader><F10> :let NERDTreeWinPos='right'<CR>
+nmap <leader><F6> :BufExplorer<CR>
+vmap <leader><F6> :BufExplorer<CR>
+
 "Bundle  'airblade/vim-gitgutter'
 
 " Misc
@@ -157,19 +164,19 @@ Bundle 'altercation/vim-colors-solarized.git'
 "else
 "    set background=dark
 "endif
-set background=dark
+"set background=dark
 "set background=light
 "set nobackup
 set t_Co=256
 colorscheme solarized
-"colorscheme darkburn_ie7
+colorscheme darkburn
 syntax on
 syntax enable
 
 if has('gui_running')
     colorscheme solarized
 else
-    colorscheme darkburn_ie7
+    colorscheme darkburn
 endif
 
 " Lua
@@ -230,7 +237,7 @@ endif
 "###########################
 
 " Something useful for myself
-set cmdheight=2
+set cmdheight=1
 set scrolloff=3
 
 " Return to last edit position when opening files (You want this!)
@@ -263,6 +270,7 @@ set wildignore=*.o,*~,*.pyc
 if has('mouse')
     set mouse=a
 endif
+set paste
 
 " Search
 set incsearch
@@ -314,8 +322,10 @@ map <leader>fs mmHmt:%s/ *$//ge<CR>'tzt'm:noh<CR>
 map <leader>ft :retab<CR>
 
 " Copy to CLIPBOARD, and use 'y' to copy to the PRIMARY
-map <leader>y "+y
-map <leader>p "+p
+"map <leader>y "+y
+"map <leader>p "+p
+map <leader>y "zy
+map <leader>p "zp
 
 " Switch CWD
 map <leader>cd :cd %:p:h<CR>:call GetCwd()<CR>
@@ -414,6 +424,13 @@ function! Mydict2(txt)
 endfunction
 nmap <leader>t :call Mydict2("")<left><left>
 
+function! Pandoc_gen()
+    let abc=system('pandoc test.md -o main.html -f markdown -t html')
+    "let abc=system('pandoc test.md -o main.html -f markdown_strict -t html')
+endfunction
+
+nmap <leader>p :call Pandoc_gen()<CR>
+
 function! Glogg()
     let expl=system(Glog)
                 "\ expand("<txt>"))
@@ -510,11 +527,14 @@ nnoremap <slient> <F8> :TlistToggle<CR>
 nmap wm :WMToggle<cr>
 nmap vq :q!<cr>
 nmap vw :w!<cr>
+nmap ww :w!<cr>
 nmap vx :w!<cr>
 nmap VQ :q!<cr>
 nmap vwq :wq<cr>
 nmap wvq :wq<cr>
 nmap cw :cw<cr>
+nmap cor :colder<cr>
+nmap cnr :cnewer<cr>
 nmap cn :cn<cr>
 nmap cp :cp<cr>
 nmap cc :cclose<cr>
@@ -527,7 +547,8 @@ nmap tl :1 tlast<cr>
 set autochdir
 " xujiaxuan end
 "from Zhang Huakang
-" set clipboard=unnamedplus
+"set clipboard=unnamedplus
+set clipboard=unnamed
 au BufReadPost quickfix wincmd J "useful function for cw
 map <F6> :call Do_CsTag()<cr>
 let g:iswindows=0
@@ -601,7 +622,9 @@ filetype plugin indent on
 set ts=4
 set expandtab
 "%retab! http://blog.163.com/panda_sha/blog/static/478281962011616124316/
-set autoindent
+"set expandtab
+
+"set autoindent
 
 " for svn
 Bundle "xujiaxuan/vcscommand.vim"
@@ -643,8 +666,14 @@ nmap K :Man <cword><CR>
 set statusline+=%{fugitive#statusline()} "  Git Hotness
 set splitbelow
 set splitright
-nmap <leader>\ :vs<CR>
-nmap <leader>- :sv<CR>
+nmap <leader>\ :belowright vs<CR>
+nmap <leader>- :belowright sv<CR>
+":leftabove {cmd}     当前窗口的左上方
+":aboveleft {cmd}     同上
+":rightbelow {cmd}     当前窗口的右下方
+":belowright {cmd}     同上
+":topleft {cmd}       整个 Vim 窗口的最上面或者最左边
+":botright {cmd}       整个 Vim 窗口的最下面或者最右边
 
 " 窗口间移动
 "按住Ctrl + W，然后再加上h, j, k, l，分别表示向左、下、上、右移动窗口
@@ -657,3 +686,17 @@ nmap <leader>- :sv<CR>
 "Ctrl + w + t：移动到最左上角的窗口
 "Ctrl + w + b：移动到最右下角的窗口
 "Ctrl + w + p：移动到前一个访问的窗口
+set noexpandtab
+set paste
+set autoindent
+
+"提供及时预览的功能"
+Plugin 'iamcco/markdown-preview.vim'
+
+"提供markdown语法高亮功能"                                        
+Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
+
+"提供pandoc语法高亮功能"
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'

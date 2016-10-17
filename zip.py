@@ -50,6 +50,7 @@ if __name__ == '__main__':
 	zip_file = 'zip_dir.zip'
 	if sys.argv[1] == "compress" or sys.argv[1] == "c":
 		input_passwd = raw_input(prompt)
+		os.system("mv zip_dir.zip zip_dir.bak.zip")
 		os.system('7za a -p'+ input_passwd +' zip_dir.zip zip_dir/*')
 	elif sys.argv[1] == "print" or sys.argv[1] == "p":
 		printdir(zip_file)

@@ -69,6 +69,8 @@ shift $(( $OPTIND - 1 ))
 for arg in "$@"; do
 	echo "converting "$arg""
 
+# --number-sections \
+
 echo "pandoc \
 -f markdown+ignore_line_breaks \
 -t html "$arg" > "${arg%.*}".html \
@@ -77,7 +79,6 @@ echo "pandoc \
 "$CSS_A" \
 "$TOC" \
 --template="$T" \
---number-sections \
 --highlight-style=haddock \
 --self-contained" | tee /tmp/pdtmp && sh < /tmp/pdtmp
 

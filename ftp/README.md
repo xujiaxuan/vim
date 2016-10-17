@@ -9,6 +9,7 @@ sudo pip install pyftpdlib  [pyftpdlib][]
 
 ### start vsftp
 sudo service vsftpd start (use /home/username dir)
+/etc/vsftpd.conf write_enable=YES
 
 ### start pyftpdlib
 python -m pyftpdlib -p 21
