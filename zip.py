@@ -11,6 +11,7 @@ import zipfile
 import sys
 import subprocess
 prompt="input passwd:"
+prompt_again="input passwd again:"
 
 def compress(zip_file, input_dir):
 	f_zip = zipfile.ZipFile(zip_file, 'w')
@@ -50,6 +51,10 @@ if __name__ == '__main__':
 	zip_file = 'zip_dir.zip'
 	if sys.argv[1] == "compress" or sys.argv[1] == "c":
 		input_passwd = raw_input(prompt)
+		input_passwd_again = raw_input(prompt_again)
+		if input_passwd != input_passwd_again:
+			sys.exit(0)
+
 		os.system("mv zip_dir.zip zip_dir.bak.zip")
 		os.system('7za a -p'+ input_passwd +' zip_dir.zip zip_dir/*')
 	elif sys.argv[1] == "print" or sys.argv[1] == "p":
