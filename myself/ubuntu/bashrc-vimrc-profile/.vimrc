@@ -425,8 +425,11 @@ endfunction
 nmap <leader>t :call Mydict2("")<left><left>
 
 function! Pandoc_gen()
-    let abc=system('pandoc test.md -o main.html -f markdown -t html')
-    "let abc=system('pandoc test.md -o main.html -f markdown_strict -t html')
+	echo 'pandoc_md.sh ' . expand('%:t')
+	let execcmd='pandoc_md.sh ' . expand('%:t')
+	let abc=system(execcmd)
+	"let abc=system('pandoc test.md -o main.html -f markdown -t html')
+	"let abc=system('pandoc test.md -o main.html -f markdown_strict -t html')
 endfunction
 
 nmap <leader>p :call Pandoc_gen()<CR>
