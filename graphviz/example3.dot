@@ -1,0 +1,13 @@
+digraph example3 {
+Server1 -> Server2
+Server2 -> Server3
+Server3 -> Server1
+
+Server1 [shape=box, label="Server1\nWeb Server", fillcolor="#ABACBA",
+style=filled]
+Server2 [shape=triangle, label="Server2\nApp Server",
+fillcolor="#DDBCBC", style=filled]
+Server3 [shape=circle, label="Server3\nDatabase Server",
+fillcolor="#FFAA22",style=filled]
+}
+

@@ -60,5 +60,6 @@ if __name__ == '__main__':
 	elif sys.argv[1] == "print" or sys.argv[1] == "p":
 		printdir(zip_file)
 	elif sys.argv[1] == "extrack" or sys.argv[1] == "e":
+		os.system("rm -rf zip_dir.bak")
 		os.system("mv zip_dir zip_dir.bak")
 		extract(zip_file, './')
