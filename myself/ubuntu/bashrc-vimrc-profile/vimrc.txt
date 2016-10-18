@@ -428,6 +428,8 @@ function! Pandoc_gen()
 	echo 'pandoc_md.sh ' . expand('%:t')
 	let execcmd='pandoc_md.sh ' . expand('%:t')
 	let abc=system(execcmd)
+	let execcmd='google-chrome ' . expand('%:t:r') . '.html &'
+	let abc=system(execcmd)
 	"let abc=system('pandoc test.md -o main.html -f markdown -t html')
 	"let abc=system('pandoc test.md -o main.html -f markdown_strict -t html')
 endfunction
