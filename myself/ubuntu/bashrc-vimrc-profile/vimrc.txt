@@ -434,7 +434,18 @@ function! Pandoc_gen()
 	"let abc=system('pandoc test.md -o main.html -f markdown_strict -t html')
 endfunction
 
+function! Pandoc_gen2()
+	echo 'pandoc_md.sh ' . expand('%:t')
+	let execcmd='pandoc_md.sh ' . expand('%:t')
+	let abc=system(execcmd)
+	"let execcmd='google-chrome ' . expand('%:t:r') . '.html &'
+	"let abc=system(execcmd)
+	"let abc=system('pandoc test.md -o main.html -f markdown -t html')
+	"let abc=system('pandoc test.md -o main.html -f markdown_strict -t html')
+endfunction
+
 nmap <leader>p :call Pandoc_gen()<CR>
+nmap <leader>l :call Pandoc_gen2()<CR>
 
 function! Glogg()
     let expl=system(Glog)
