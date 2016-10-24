@@ -1,9 +1,9 @@
 #!/usr/bin/python
 import os
 import sys
-os.system("scp ~/.vimrc vimrc.txt")
-os.system("scp ~/.bashrc bashrc.txt")
-os.system("scp ~/.profile .profile.txt")
+#os.system("scp ~/.vimrc vimrc.txt")
+#os.system("scp ~/.bashrc bashrc.txt")
+#os.system("scp ~/.profile .profile.txt")
 os.system("scp ~/.vimrc .vimrc")
 os.system("scp ~/.bashrc .bashrc")
 os.system("scp ~/.dircolors .dircolors")

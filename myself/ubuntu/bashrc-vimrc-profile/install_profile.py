@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import os
 import sys
-os.system(" cp .profile 	~/.profile.txt")
+#os.system(" cp .profile 	~/.profile.txt")
 os.system(" cp .vimrc 	        ~/.vimrc")
 os.system(" cp .bashrc 	        ~/.bashrc")
 os.system(" cp .dircolors       ~/.dircolors")
