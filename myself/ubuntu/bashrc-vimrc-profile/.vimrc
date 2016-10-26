@@ -716,3 +716,5 @@ Plugin 'godlygeek/tabular'
 "提供pandoc语法高亮功能"
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+
+let g:mkdp_refresh_slow = 1
