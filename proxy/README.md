@@ -8,7 +8,9 @@
 ## 客户机配置
 ### 开启socket5 本地程序通过server：xujx@10.8.74.174：202的代理
 	ssh -l xujx -p 202 -N -f -D 0.0.0.0:10800 10.8.74.174
+	or ssh -l xujx -p 202 -N -f -D 0.0.0.0:10800 10.8.74.174 -oConnectTimeout=180 -oServerAliveInterval=240
 	开启ssh客户端(linux machine or cygwin)
+	如果突然不能连接，可以尝试重新执行上面的ssh 客户端或者重新start sshd 或者重新开个cygwin
 
 #### window用户
 `下载Proxifier->设置代理服务器->socket5:127.0.0.1:10800`
