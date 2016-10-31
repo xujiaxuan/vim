@@ -52,6 +52,9 @@ hexo deploy // input username and password
 ERROR Deployer not found: git 或者 ERROR Deployer not found: github
 npm install hexo-deployer-git --save
 
+## 4.4 new article
+hexo new "my first article"
+
 # 其他参考
 [githubpages][]
 
@@ -63,6 +66,7 @@ npm install hexo-deployer-git --save
 [生活与代码博文][]
 
 [使用Category分类][]
+[HEXO+Github,搭建属于自己的博客][]
 
 [xujiaxuan.github.io]: http://xujiaxuan.github.io/
 [githubpages]: https://pages.github.com/
@@ -71,4 +75,5 @@ npm install hexo-deployer-git --save
 [俊民的博客]: http://spxiaomin.github.io/github_blog/
 [生活与代码博文]: https://github.com/SPxiaomin/github_blog
 [使用Category分类]:  https://segmentfault.com/a/1190000000406017
+[HEXO+Github,搭建属于自己的博客]: http://www.jianshu.com/p/465830080ea9
 
