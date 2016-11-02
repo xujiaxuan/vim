@@ -55,6 +55,31 @@ npm install hexo-deployer-git --save
 ## 4.4 new article
 hexo new "my first article"
 
+## 4.5 install Next themes
+```
+git clone https://github.com/iissnan/hexo-theme-next themes/next
+/root/_config.yml配置项theme
+#Extensions
+#Plugins: http://hexo.io/plugins/
+#Themes: http://hexo.io/themes/
+theme: next
+```
+# 4.6 use duoshuo
+http://duoshuo.com/ -> 登入 -> 创建站点
+next->_config.yml
+	shortname:xujiaxuan
+	share:true
+
+# 4.7 use leancloud
+https://leancloud.cn
+[leancloud] []
+
+# 4.8 other
+添加categories分类
+scheme改为Pisces
+keyword 改为x.m blog
+更新language title author
+
 # 其他参考
 [githubpages][]
 
@@ -76,4 +101,4 @@ hexo new "my first article"
 [生活与代码博文]: https://github.com/SPxiaomin/github_blog
 [使用Category分类]:  https://segmentfault.com/a/1190000000406017
 [HEXO+Github,搭建属于自己的博客]: http://www.jianshu.com/p/465830080ea9
-
+[leancloud]: http://www.tuicool.com/articles/YB3EJnz 
