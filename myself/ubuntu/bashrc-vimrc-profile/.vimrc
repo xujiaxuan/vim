@@ -6,7 +6,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 "set nocompatible                " be iMproved
-filetype off                    " required!
+"filetype off                    " required!
 
 let mapleader = ";e"            " must on the top
 let g:mapleader = ";e"
@@ -121,6 +121,8 @@ nmap <leader><F9> :let NERDTreeWinPos='left'<CR>
 nmap <leader><F10> :let NERDTreeWinPos='right'<CR>
 vmap <leader><F9> :let NERDTreeWinPos='left'<CR>
 vmap <leader><F10> :let NERDTreeWinPos='right'<CR>
+nmap <leader>o :BufExplorer<CR>
+vmap <leader>o :BufExplorer<CR>
 nmap <leader><F6> :BufExplorer<CR>
 vmap <leader><F6> :BufExplorer<CR>
 
@@ -370,10 +372,10 @@ map <leader>l 20<C-w>>
 
 
 " replaced by <C-c>
-nmap - ^
-nmap = $
-vmap - ^
-vmap = $
+"nmap - ^
+"nmap = $
+"vmap - ^
+"vmap = $
 
 " use Q for recording
 noremap q <Nop>
@@ -398,7 +400,7 @@ vmap ? :call VisualSelection('?')<CR><CR>
 "vmap K :call VisualSelection('k')<CR>
 "set keywordprg=sdcv
 function! Mydict()
-    let expl=system('sdcv -c -n ' .
+    let expl=system('sdcv -n ' .
                 \ expand("<cword>"))
     windo if
                 \ expand("%")=="diCt-tmp" |
@@ -716,5 +718,8 @@ Plugin 'godlygeek/tabular'
 "提供pandoc语法高亮功能"
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+Bundle 'matchit.zip'
 
 let g:mkdp_refresh_slow = 1
+filetype on 
+Bundle 'othree/xml.vim'

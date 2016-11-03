@@ -675,6 +675,7 @@ alias source_dpdk="cd /home/xujx/compile2/re_git/bras_t1/dpdk && . dpdkrc && cd 
 alias start_dropbear="sudo /usr/local/sbin/dropbear -p 202 -E -F"
 alias dpi="cd /home/xujx/compile2/re_git/dpi_t1"
 alias dpi-dir="cd /home/xujx/compile2/re_git/ndpi_github/nDPI"
+alias dpi-web="cd /home/xujx/compile2/re_git/dpi_t1/web/flask/dpi_web_server"
 alias flask="cd /home/xujx/compile2/re_git/dpi_t1/web/flask"
 alias work="cd /home/xujx/vim2/vim"
 alias work_ubuntu="cd /home/xujx/vim2/vim/myself/ubuntu"
