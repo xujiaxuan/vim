@@ -272,7 +272,7 @@ set wildignore=*.o,*~,*.pyc
 if has('mouse')
     set mouse=a
 endif
-set paste
+"set paste
 
 " Search
 set incsearch
@@ -705,7 +705,7 @@ nmap <leader>- :belowright sv<CR>
 "Ctrl + w + b：移动到最右下角的窗口
 "Ctrl + w + p：移动到前一个访问的窗口
 set noexpandtab
-set paste
+"set paste
 set autoindent
 
 "提供及时预览的功能"
@@ -723,3 +723,4 @@ Bundle 'matchit.zip'
 let g:mkdp_refresh_slow = 1
 filetype on 
 Bundle 'othree/xml.vim'
+inoremap jj <esc>
