@@ -724,3 +724,4 @@ let g:mkdp_refresh_slow = 1
 filetype on 
 Bundle 'othree/xml.vim'
 inoremap jj <esc>
+inoremap qq <esc>
