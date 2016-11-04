@@ -447,7 +447,7 @@ function! Pandoc_gen2()
 endfunction
 
 nmap <leader>p :call Pandoc_gen()<CR>
-nmap <leader>l :call Pandoc_gen2()<CR>
+nmap <leader>m :call Pandoc_gen2()<CR>
 
 function! Glogg()
     let expl=system(Glog)
