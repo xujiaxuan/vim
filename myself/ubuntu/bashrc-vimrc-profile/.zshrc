@@ -669,6 +669,19 @@ alias wsgitaccel="cd /home/xujiaxuan/workdir/bras_t1/bras_t1_git/accel_ppp"
 
 alias -g H37="172.16.0.37"
 alias -g RE_GIT="/home/xujx/compile2/re_git/bras_t1"
+alias -g h='HEAD'
+alias -g h1='HEAD^'
+alias -g h2='HEAD^^'
+alias -g h3='HEAD^^^'
+alias -g H='HEAD~'
+alias -g d='diff'
+alias -g g='git'
+alias -g l='log'
+alias -g s='status --untracked-files=no'
+alias -g a='add'
+alias -g au='add -u'
+alias -g c='commit'
+alias -g co='checkout'
 
 alias accel-dpdk-source="cd ../../dpdk && source dpdkrc && cd ../accel_ppp/build"
 alias source_dpdk="cd /home/xujx/compile2/re_git/bras_t1/dpdk && . dpdkrc && cd -"
@@ -676,9 +689,10 @@ alias start_dropbear="sudo /usr/local/sbin/dropbear -p 202 -E -F"
 alias dpi="cd /home/xujx/compile2/re_git/dpi_t1"
 alias dpi-dir="cd /home/xujx/compile2/re_git/ndpi_github/nDPI"
 alias dpi-web="cd /home/xujx/compile2/re_git/dpi_t1/web/flask/dpi_web_server"
+alias web="cd /home/xujx/compile2/re_git/dpi_t1/web/app"
 alias flask="cd /home/xujx/compile2/re_git/dpi_t1/web/flask"
-alias work="cd /home/xujx/vim2/vim"
-alias work_ubuntu="cd /home/xujx/vim2/vim/myself/ubuntu"
+alias work="cd /home/xujx/compile2/re_git/vim"
+alias work_ubuntu="cd /home/xujx/compile2/re_git/vim/myself/ubuntu"
 
 #scp 37 to local
     #scp -P 202 a xujx@10.8.74.174:~/
