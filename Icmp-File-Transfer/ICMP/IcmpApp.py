@@ -42,11 +42,16 @@ class IcmpSender (IcmpApp):
         while True: 
             data = self._file.read(56)
             if not data:
-                packet = IcmpPacket(ECHO_REQUEST, seq_n=seq_n, payload=data, 
-                                    code=2)
+                print "ICMPApp send"
+                print data
+                packet = IcmpPacket(ECHO_REQUEST, seq_n=seq_n, payload="@xujx@123456@")
+                print packet
                 self.socket.sendto(packet, dst_addr)
                 break
+            print "ICMPApp send 1"
+            print data
             packet = IcmpPacket(ECHO_REQUEST, seq_n=seq_n, payload=data)
+            print packet
             self.socket.sendto(packet, dst_addr)
             seq_n += 1
         
@@ -61,9 +66,13 @@ class IcmpReceiver (IcmpApp):
     def receive (self):
         buff = []
         while True:
+            print "ICMPApp recv"
             icmp = self.socket.recv()
-            if icmp.code is 2: break
+            print icmp
+            print icmp.code
+            if icmp.payload == "@xujx@123456@": break
             buff.append((icmp.seq_n, icmp.payload))
+        print "ICMPApp recv 1"
         buff.sort()
         str_buff = ''
         for elem in buff:
