@@ -151,6 +151,7 @@ alias gitdiffmast="git diff mast > mast.patch" #对应将工作区中的内容�
 alias gitapply="git apply mast.patch" #对应使用mast.patch文件对工作区中的内容进行打补丁。运行这个之前可以先：git checkout mast。
 alias gitformat="git format-patch -M master " #自动生成00000.patch.
 alias gitapplyformat="git am 00000.patch" #使用patch对工作区中的内容进行打补丁。
+alias gt="gitdiffst" #使用patch对工作区中的内容进行打补丁。
 
 #patch
 alias gitpatch="git format-patch  -o . -1"  #   #就最后一个提交作成一个补丁。 -2:最后两个提交作成两个分开的两个patch -3:左后三个提交作成分开的三个提交。以此类推。
@@ -183,7 +184,7 @@ alias re_git_dpdk="cd /home/xujx/compile2/re_git/bras_t1/dpdk"
 alias re_git_prox="cd /home/xujx/compile2/re_git/bras_t1/prox"
 alias sshdpdk2="ssh -l xujx 172.16.1.70"
 
-alias v="vim "
+#alias v="vim "
 alias vt="vim -t "
 alias vcd="vim ."
 
@@ -207,7 +208,7 @@ alias diffu="diff -u -c" #name1 name2 以第一个为标准 如 -：删除 +：�
 alias diffr="diff -u -r -c " #path1 path2  :diff -r -u <path1> <path2>  if not with -r but with path will just in deepth of one.  
 alias diffuN="diff -uN" #output near the same as git diff
 #vim
-alias v="vim "
+#alias v="vim "
 #clear 清屏
 alias clearp="clear " # 或者使用ctrl + l
 #apt get
@@ -677,22 +678,27 @@ alias -g H='HEAD~'
 alias -g d='diff'
 alias -g g='git'
 alias -g l='log'
-alias -g s='status --untracked-files=no'
+#alias -g s='status --untracked-files=no'
 alias -g a='add'
 alias -g au='add -u'
 alias -g c='commit'
 alias -g co='checkout'
+alias -g dpidir="/home/xujx/compile2/re_git/dpi_t1"
 
 alias accel-dpdk-source="cd ../../dpdk && source dpdkrc && cd ../accel_ppp/build"
 alias source_dpdk="cd /home/xujx/compile2/re_git/bras_t1/dpdk && . dpdkrc && cd -"
 alias start_dropbear="sudo /usr/local/sbin/dropbear -p 202 -E -F"
 alias dpi="cd /home/xujx/compile2/re_git/dpi_t1"
+alias f-stack="cd /home/xujx/compile2/re_git/f-stack"
+alias f_stack="cd /home/xujx/compile2/re_git/test/f-stack"
 alias dpi-dir="cd /home/xujx/compile2/re_git/ndpi_github/nDPI"
 alias dpi-web="cd /home/xujx/compile2/re_git/dpi_t1/web/flask/dpi_web_server"
 alias web="cd /home/xujx/compile2/re_git/dpi_t1/web/app"
+alias mtcp="cd /home/xujx/compile2/re_git/mtcp/mtcp"
 alias flask="cd /home/xujx/compile2/re_git/dpi_t1/web/flask"
 alias work="cd /home/xujx/compile2/re_git/vim"
 alias work_ubuntu="cd /home/xujx/compile2/re_git/vim/myself/ubuntu"
+alias zlog="cd /home/xujx/compile2/re_git/zlog"
 
 #scp 37 to local
     #scp -P 202 a xujx@10.8.74.174:~/
