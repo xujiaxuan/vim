@@ -1,0 +1,6 @@
+<html>
+<body>
+<iframe frameborder="0" width="49%" height="100%" src="/edittxt/{{ file }}" scrolling="yes"></iframe>  
+<iframe frameborder="0" width="49%" height="100%" src="/edit/{{ file }}" scrolling="yes"></iframe>  
+</body>
+</html>
